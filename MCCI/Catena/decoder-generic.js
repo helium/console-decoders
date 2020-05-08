@@ -1,6 +1,6 @@
 // This function decodes the records (port 1, format 0x11, 0x14, 0x15, 0x16, 0x17)
 // sent by the MCCI Catena 4410/4450/4551 soil/water and power applications.
-// For use with console.thethingsnetwork.org
+// For use with console.thethingsnetwork.org and console.helium.com
 // 2017-09-19 add dewpoints.
 // 2017-12-13 fix commments, fix negative soil/water temp, add test vectors.
 // 2017-12-15 add format 0x11.

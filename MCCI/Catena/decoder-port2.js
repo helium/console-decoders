@@ -1,7 +1,7 @@
 /*
 Name:   catena-message-port2-decoder-ttn.js
 Function:
-    Decode MCCI port 0x02 messages for TTN console.
+    Decode MCCI port 0x02 messages for TTN and Helium consoles.
 Copyright and License:
     See accompanying LICENSE file at https://github.com/mcci-catena/MCCI-Catena-PMS7003/
 Author:
@@ -107,7 +107,7 @@ function CalculateHeatIndex(t, rh) {
 /*
 Name:  Decoder()
 Function:
-    Decode an MCCI Catena port-2 message for The Things Network console.
+    Decode an MCCI Catena port-2 message for The Things Network or Helium Network consoles.
 Definition:
     function Decoder(bytes, port) -> object
 Description:

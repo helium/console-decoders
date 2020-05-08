@@ -1,7 +1,7 @@
 /*
 Name:   catena-message-port3-decoder-ttn.js
 Function:
-    Decode MCCI port 0x03 messages for TTN console.  Usually the generic decoder is more
+    Decode MCCI port 0x03 messages for TTN and Helium console.  Usually the generic decoder is more
     convenient (catena-message-generic-decoder-ttn.js)
 Copyright and License:
     See accompanying LICENSE file at https://github.com/mcci-catena/MCCI-Catena-PMS7003/
@@ -117,7 +117,7 @@ function CalculateHeatIndexCelsius(t, rh) {
 /*
 Name:  Decoder()
 Function:
-    Decode an MCCI Catena port-2 message for The Things Network console.
+    Decode an MCCI Catena port-2 message for The Things Network or Heium Network consoles.
 Definition:
     function Decoder(bytes, port) -> object
 Description:
