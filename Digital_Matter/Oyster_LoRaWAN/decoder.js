@@ -1,23 +1,27 @@
+// Decode an uplink message from an array of bytes to an object of fields
 function Decoder(bytes, port)
 {
  var decoded = {};
  if (port === 1)
  {
  decoded.type = "position";
- decoded.latitudeDeg = bytes[0] + bytes[1] * 256 +
+ decoded.latitude = bytes[0] + bytes[1] * 256 +
  bytes[2] * 65536 + bytes[3] * 16777216;
- if (decoded.latitudeDeg >= 0x80000000) // 2^31
- decoded.latitudeDeg -= 0x100000000; // 2^32
- decoded.latitudeDeg /= 1e7;
+ if (decoded.latitude >= 0x80000000) // 2^31
+ decoded.latitude -= 0x100000000; // 2^32
+ decoded.latitude /= 1e7;
 
- decoded.longitudeDeg = bytes[4] + bytes[5] * 256 +
+ decoded.longitude = bytes[4] + bytes[5] * 256 +
  bytes[6] * 65536 + bytes[7] * 16777216;
- if (decoded.longitudeDeg >= 0x80000000) // 2^31
- decoded.longitudeDeg -= 0x100000000; // 2^32
- decoded.longitudeDeg /= 1e7;
+ if (decoded.longitude >= 0x80000000) // 2^31
+ decoded.longitude -= 0x100000000; // 2^32
+ decoded.longitude /= 1e7;
  decoded.inTrip = ((bytes[8] & 0x1) !== 0) ? true : false;
  decoded.fixFailed = ((bytes[8] & 0x2) !== 0) ? true : false;
- decoded.headingDeg = (bytes[8] >> 2) * 5.625;
+ if (decoded.fixFailed == false) 
+ decoded.accuracy = 20; // if GPS Fix set accuracy as 20
+ decoded.altitude = 0; // altitude information not available
+ decoded.heading = (bytes[8] >> 2) * 5.625;
 
  decoded.speedKmph = bytes[9];
  decoded.batV = bytes[10] * 0.025;
@@ -26,20 +30,23 @@ function Decoder(bytes, port)
  else if (port === 4)
  {
  decoded.type = "position";
- decoded.latitudeDeg = bytes[0] + bytes[1] * 256 + bytes[2] * 65536;
- if (decoded.latitudeDeg >= 0x800000) // 2^23
- decoded.latitudeDeg -= 0x1000000; // 2^24
- decoded.latitudeDeg *= 256e-7;
+ decoded.latitude = bytes[0] + bytes[1] * 256 + bytes[2] * 65536;
+ if (decoded.latitude >= 0x800000) // 2^23
+ decoded.latitude -= 0x1000000; // 2^24
+ decoded.latitude *= 256e-7;
 
- decoded.longitudeDeg = bytes[3] + bytes[4] * 256 + bytes[5] * 65536;
- if (decoded.longitudeDeg >= 0x800000) // 2^23
- decoded.longitudeDeg -= 0x1000000; // 2^24
- decoded.longitudeDeg *= 256e-7;
- decoded.headingDeg = (bytes[6] & 0x7) * 45;
+ decoded.longitude = bytes[3] + bytes[4] * 256 + bytes[5] * 65536;
+ if (decoded.longitude >= 0x800000) // 2^23
+ decoded.longitude -= 0x1000000; // 2^24
+ decoded.longitude *= 256e-7;
+ decoded.heading = (bytes[6] & 0x7) * 45;
  decoded.speedKmph = (bytes[6] >> 3) * 5;
  decoded.batV = bytes[7] * 0.025;
  decoded.inTrip = ((bytes[8] & 0x1) !== 0) ? true : false;
  decoded.fixFailed = ((bytes[8] & 0x2) !== 0) ? true : false;
+ if (decoded.fixFailed == false) 
+ decoded.accuracy = 20;
+ decoded.altitude = 0; // altitude information not available
  decoded.manDown = ((bytes[8] & 0x4) !== 0) ? true : false;
  }
  else if (port === 2)
