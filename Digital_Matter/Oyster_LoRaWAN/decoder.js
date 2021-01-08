@@ -19,7 +19,7 @@ function Decoder(bytes, port)
  decoded.inTrip = ((bytes[8] & 0x1) !== 0) ? true : false;
  decoded.fixFailed = ((bytes[8] & 0x2) !== 0) ? true : false;
  if (decoded.fixFailed == false) 
- decoded.accuracy = 20; // if GPS Fix set accuracy as 20
+ decoded.accuracy = 20;
  decoded.altitude = 0; // altitude information not available
  decoded.heading = (bytes[8] >> 2) * 5.625;
 
@@ -45,7 +45,7 @@ function Decoder(bytes, port)
  decoded.inTrip = ((bytes[8] & 0x1) !== 0) ? true : false;
  decoded.fixFailed = ((bytes[8] & 0x2) !== 0) ? true : false;
  if (decoded.fixFailed == false) 
- decoded.accuracy = 20;
+ decoded.accuracy = 20; // if GPS Fix set accuracy as 20
  decoded.altitude = 0; // altitude information not available
  decoded.manDown = ((bytes[8] & 0x4) !== 0) ? true : false;
  }
