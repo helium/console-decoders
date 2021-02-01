@@ -14,29 +14,6 @@ function Decoder(bytes, port) {
         "bytes": bytes
     };
     
-    // VOC Measurement
-	// Disabled on the TBHH100, i.e. is always ffff so comment this section out
-    /*
-	voc = (bytes[7] << 8) | bytes[6];
-    if (voc === 65535) {
-        voc_error = true;
-    } else {
-        voc_error = false;
-    }
-	*/
-	
-    // CO2 Measurement
-	// Disabled on the TBHH100, i.e. is always ffff so comment this section out
-	/*
-    co2 = (bytes[5] << 8) | bytes[4];
-    if (co2 === 65535) {
-        co2_error = true;
-    } else {
-        co2_error = false;
-    }
-	*/
-
-
     // Humidity Measurement
     rh = bytes[3] &= 0x7f;
     if (rh === 127) {
@@ -55,12 +32,7 @@ function Decoder(bytes, port) {
     batt = bytes[1] & 0x0f;
     batt = (25 + batt) / 10;
 
-    //params.voc = voc;
-    //params.voc_error = voc_error;
-    //params.co2 = co2;
-    // params.co2_error = co2_error;
     params.rh = rh;
-    //params.rh_error = rh_error;
     params.temp = temp;
     params.batt = batt;
 
