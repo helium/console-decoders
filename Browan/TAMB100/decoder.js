@@ -11,9 +11,9 @@ function Decoder(bytes, port) {
     };
 
     // Status measurement
-	params.darker = ((bytes[0] & 0x0) !== 0) ? true : false;
-	params.lighter = ((bytes[0] & 0x1) !== 0) ? true : false;
-	params.keep_alive = ((bytes[0] & 0x4) !== 0) ? true : false;
+	params.darker = ((bytes[0] & 0x1) !== 0) ? true : false;
+	params.lighter = ((bytes[0] & 0x2) !== 0) ? true : false;
+	params.keep_alive = ((bytes[0] & 0x5) !== 0) ? true : false;
 	   
 	// Lux
 	params.lux = ((bytes[5] << 16) | (bytes[4] << 8) | bytes[3])/100;
