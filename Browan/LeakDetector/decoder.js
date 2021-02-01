@@ -12,9 +12,9 @@ function Decoder(bytes, port) {
 
     // Status measurement
     params.leak = ((bytes[0] & 0x1) !== 0) ? true : false;
-    params.waterleakint = ((bytes[8] & 0x4) !== 0) ? true : false;
-    params.temp_change = ((bytes[8] & 0x5) !== 0) ? true : false;
-    params.RH_change = ((bytes[8] & 0x6) !== 0) ? true : false;
+    params.waterleakint = ((bytes[0] & 0x4) !== 0) ? true : false;
+    params.temp_change = ((bytes[0] & 0x5) !== 0) ? true : false;
+    params.RH_change = ((bytes[0] & 0x6) !== 0) ? true : false;
     
     
     
