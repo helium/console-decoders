@@ -6,21 +6,19 @@
 
 function Decoder(bytes, port) {
 
-    var params = {
-        "bytes": bytes
-    };
+    var params = {};
 
     // Status measurement
     params.leak = ((bytes[0] & 0x1) !== 0) ? true : false;
-    params.waterleakint = ((bytes[0] & 0x5) !== 0) ? true : false;
-    params.temp_change = ((bytes[0] & 0x6) !== 0) ? true : false;
-    params.RH_change = ((bytes[0] & 0x7) !== 0) ? true : false;
+    params.leak_change = ((bytes[0] & 0x16) !== 0) ? true : false;
+    params.temp_change = ((bytes[0] & 0x32) !== 0) ? true : false;
+    params.RH_change = ((bytes[0] & 0x64) !== 0) ? true : false;
     
     
     
 
     // Humidity Measurement
-    rh = bytes[3] &= 0x7f;
+    rh = bytes[3] & 0x7f;
     if (rh === 127) {
         rh_error = true;
     } else {
@@ -38,6 +36,7 @@ function Decoder(bytes, port) {
     // Battery measurements
     batt = bytes[1] & 0x0f;
     batt = (25 + batt) / 10;
+    
     params.rh = rh;
     params.rh_error = rh_error;
     params.temp_board = temp_board;
