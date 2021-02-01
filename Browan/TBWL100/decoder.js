@@ -24,7 +24,7 @@ function Decoder(bytes, port) {
     } else {
         rh_error = false;
     }
-    
+     
     // Board temp measurement
     temp_board = bytes[2] & 0x7f;
     temp_board = temp_board - 32;
