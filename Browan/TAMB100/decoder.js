@@ -7,9 +7,7 @@
 
 function Decoder(bytes, port) {
 
-    var params = {
-        "bytes": bytes
-    };
+    var params = {};
 
     // Status measurement
 	params.darker = ((bytes[0] & 0x1) !== 0) ? true : false;
