@@ -3,6 +3,7 @@
  * Browan Ambient Light Sensor
  *
  * This function was created by Jason
+ */
 
 function Decoder(bytes, port) {
 
