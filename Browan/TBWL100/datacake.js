@@ -10,15 +10,15 @@ function Decoder(payload, port) {
             },
             {
                 field: "LEAK_CHANGE",
-                value: ((payload[0] & 0x10) !== 0) ? true : false,
+                value: ((payload[0] & 0x8) !== 0) ? true : false,
             },
             {
                 field: "TEMP_CHANGE",
-                value: ((payload[0] & 0x20) !== 0) ? true : false,
+                value: ((payload[0] & 0x10) !== 0) ? true : false,
             },
             {
                 field: "RH_CHANGE",
-                value: ((payload[0] & 0x40) !== 0) ? true : false,
+                value: ((payload[0] & 0x20) !== 0) ? true : false,
             },
             {
                 field: "HUMIDITY",
