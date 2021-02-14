@@ -3,19 +3,21 @@
  * Browan Ambient Light Sensor
  *
  * This function was created by Jason
+ * Sample payload 600c341a26
  */
 
 function Decoder(bytes, port) {
 
-    var params = {};
+    var decoded = {};
 
     // Status measurement
-	params.darker = ((bytes[0] & 0x1) !== 0) ? true : false;
-	params.lighter = ((bytes[0] & 0x2) !== 0) ? true : false;
-	params.keep_alive = ((bytes[0] & 0x20) !== 0) ? true : false;
+	decoded.darker = bit(bytes[0], 0);
+	decoded.lighter = bit(bytes[0], 1);
+	decoded.status_change = bit(bytes[0], 4);
+	decoded.keep_alive = bit(bytes[0], 5);
 	   
 	// Lux
-	params.lux = ((bytes[5] << 16) | (bytes[4] << 8) | bytes[3])/100;
+	decoded.lux = ((bytes[5] << 16) | (bytes[4] << 8) | bytes[3])/100;
 
 
     
@@ -28,8 +30,13 @@ function Decoder(bytes, port) {
     // Battery measurements
     batt = bytes[1] & 0x0f;
     batt = (25 + batt) / 10;
-    params.temp_board = temp_board;
-    params.batt = batt;
+    decoded.temp_board = temp_board;
+    decoded.batt = batt;
 
-    return params;
+    return decoded;
+}
+
+// Gets the boolean value of the given bit
+function bit(value, bit) {
+  return (value & (1 << bit)) > 0;
 }
