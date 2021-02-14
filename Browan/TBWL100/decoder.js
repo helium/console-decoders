@@ -10,7 +10,7 @@ function Decoder(bytes, port) {
 
     // Status measurement
     params.leak = bit(bytes[0], 0);
-    params.leak_change = bit(bytes[0], 4);
+    params.leak_int = bit(bytes[0], 4);
     params.temp_change = bit(bytes[0], 5);
     params.RH_change = bit(bytes[0], 6);
     
