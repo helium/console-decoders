@@ -9,10 +9,10 @@ function Decoder(bytes, port) {
     var params = {};
 
     // Status measurement
-    params.leak = ((bytes[0] & 0x1) !== 0) ? true : false;
-    params.leak_change = ((bytes[0] & 0x8) !== 0) ? true : false;
-    params.temp_change = ((bytes[0] & 0x10) !== 0) ? true : false;
-    params.RH_change = ((bytes[0] & 0x20) !== 0) ? true : false;
+    params.leak = bit(bytes[0], 0);
+    params.leak_change = bit(bytes[0], 4);
+    params.temp_change = bit(bytes[0], 5);
+    params.RH_change = bit(bytes[0], 6);
     
     
     
@@ -44,4 +44,9 @@ function Decoder(bytes, port) {
     params.batt = batt;
 
     return params;
+}
+
+// Gets the boolean value of the given bit
+function bit(value, bit) {
+  return (value & (1 << bit)) > 0;
 }
