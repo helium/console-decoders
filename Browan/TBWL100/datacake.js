@@ -3,27 +3,38 @@
 
 function Decoder(payload, port) {
 
+	    rh = payload[3] & 0x7f;
+    if (rh === 127) {
+        rh_error = true;
+    } else {
+        rh_error = false;
+    }
+
         return [
             {
                 field: "WATER_LEAK",
-                value: ((payload[0] & 0x1) !== 0) ? true : false,
+                value: bit(payload[0], 0),
             },
             {
-                field: "LEAK_CHANGE",
-                value: ((payload[0] & 0x8) !== 0) ? true : false,
+                field: "LEAK_INT",
+                value: bit(payload[0], 4),
             },
             {
                 field: "TEMP_CHANGE",
-                value: ((payload[0] & 0x10) !== 0) ? true : false,
+                value: bit(payload[0], 5),
             },
             {
                 field: "RH_CHANGE",
-                value: ((payload[0] & 0x20) !== 0) ? true : false,
+                value: bit(payload[0], 6),
             },
             {
                 field: "HUMIDITY",
-                value: ((payload[3] & 0x7f),
+                value: rh,
             },
+			{
+				field: "RH_ERROR",
+				value : rh_error,
+			},
             {
                 field: "TEMP_BOARD",
                 value: (payload[2] & 0x7f) - 32,
@@ -38,4 +49,9 @@ function Decoder(payload, port) {
             }
 
         ];
+}
+
+// Gets the boolean value of the given bit
+function bit(value, bit) {
+  return (value & (1 << bit)) > 0;
 }
