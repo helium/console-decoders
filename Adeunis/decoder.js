@@ -1,4 +1,5 @@
-// TTN decoder function for the Adeunis Field Test Device LoRaWAN
+// Helium decoder function for the Adeunis Field Test Device LoRaWAN
+// working with EU868 and US915 Firmware
 // https://www.adeunis.com/en/produit/ftd-868-915-2/
 
 function Decoder(bytes, port) {
