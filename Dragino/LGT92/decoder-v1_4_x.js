@@ -19,6 +19,8 @@ function Decoder(bytes, port) {
     pitch: pitch,
     batV: batV,
     alarm: alarm,
+    altitude: 0,
+    accuracy: 3,
   };
   var value = (bytes[0] << 16) | (bytes[1] << 8) | bytes[2];
   if (bytes[0] & 0x80) {
