@@ -44,5 +44,7 @@ function Decoder(bytes, port) {
     // Pitch: signed 16 bits integer, MSB, unit: Â°
 
     Pitch: (((bytes[13] << 24) >> 16) | bytes[14]) / 100,
+    Altitude: 0,
+    Accuracy: 3,
   };
 }
