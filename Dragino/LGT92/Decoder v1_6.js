@@ -68,17 +68,17 @@ else
 var altitude =(bytes[16]<<8 | bytes[17]) / 100; //Altitude,units: Â°
 
 return {
-Latitude: latitude,
-Longitude: longitude,
-Roll: roll,
-Pitch:pitch,
-Battery:batV,
+latitude: latitude,
+longitude: longitude,
+roll: roll,
+ritch:pitch,
+battery:batV,
 ALARM_status:alarm,
 MD:motion_mode,
 LON:led_updown,
 FW:Firmware,
 HDOP:hdop,
-Altitude:altitude,
-Accuracy:3
+altitude:altitude,
+accuracy:3
 };
 }
