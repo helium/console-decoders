@@ -4,24 +4,12 @@ function Decoder(bytes, port) {
 // (array) of bytes to an object of fields.
 
 var latitude=0;//gps latitude,units: Â°
-if(bytes[0] !== 0)
-{
-  latitude=(bytes[0]<<24 | bytes[1]<<16 | bytes[2]<<8 | bytes[3])/1000000;//gps latitude,units: Â°
-}
-else
-{
-  latitude=0;//gps latitude,units: Â°
-}
+  
+latitude=(bytes[0]<<24 | bytes[1]<<16 | bytes[2]<<8 | bytes[3])/1000000;//gps latitude,units: Â°
 
 var longitude = 0;
-if(bytes[4] !== 0)
-{
-  longitude=(bytes[4]<<24 | bytes[5]<<16 | bytes[6]<<8 | bytes[7])/1000000;//gps longitude,units: Â°
-}
-else
-{
- longitude=0;//gps longitude,units: Â°
-}
+  
+longitude=(bytes[4]<<24 | bytes[5]<<16 | bytes[6]<<8 | bytes[7])/1000000;//gps longitude,units: Â°
 
 var alarm=(bytes[8] & 0x40)?"TRUE":"FALSE";//Alarm status
 
