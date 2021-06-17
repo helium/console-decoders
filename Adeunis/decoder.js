@@ -1,4 +1,7 @@
+
 // TTN decoder function for the Adeunis Field Test Device LoRaWAN
+// Helium decoder function for the Adeunis Field Test Device LoRaWAN
+// working with EU868 and US915 Firmware
 // https://www.adeunis.com/en/produit/ftd-868-915-2/
 
 function Decoder(bytes, port) {
@@ -66,8 +69,7 @@ function Decoder(bytes, port) {
 	  decoded.gps_quality = bytes[offset + 8] >> 4;
 	  break;
 	  }
-	  
-      decoded.hdop = 1 << (bytes[offset + 8] >> 4); // 2^(gps_quality-1)
+	    decoded.hdop = 1 << (bytes[offset + 8] >> 4); // 2^(gps_quality-1)
       decoded.sats = bytes[offset + 8] & 0x0f; // number of satellites
       offset += 9;
     }
