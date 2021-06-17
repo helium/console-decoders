@@ -3,6 +3,9 @@
 
 function Decoder(payload, port) {
 
+
+if (port===106) 
+{
 	    rh = payload[3] & 0x7f;
     if (rh === 127) {
         rh_error = true;
@@ -49,6 +52,32 @@ function Decoder(payload, port) {
             }
 
         ];
+}
+
+if (port===204)
+{
+       return [
+            {
+                field: "KEEP_ALIVE_INTERVAL",
+                value: payload[2]<<8) | (payload[1],
+            },
+            {
+                field: "TEMP_DELTA",
+                value: payload[4],
+            },
+            {
+                field: "RH_DELTA",
+                value: payload[6],
+            },
+            {
+                field: "SENSOR_DETECT_INTERVAL",
+                value: payload[9]<<8 | payload[8],
+            }
+
+        ];
+}
+
+
 }
 
 // Gets the boolean value of the given bit
