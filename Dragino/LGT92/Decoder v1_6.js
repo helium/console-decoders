@@ -66,7 +66,7 @@ MD:motion_mode,
 LON:led_updown,
 FW:Firmware,
 HDOP:hdop,
-altitude:altitude,
+altitude:altitude.toFixed(0),
 accuracy:3
 };
 }
