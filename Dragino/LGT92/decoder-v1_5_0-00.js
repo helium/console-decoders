@@ -49,5 +49,7 @@ function Decoder(bytes, port) {
     ALARM_status: alarm,
     MD: motion_mode,
     LON: led_updown,
+    Altitude: 0,
+    Accuracy: 3,
   };
 }
