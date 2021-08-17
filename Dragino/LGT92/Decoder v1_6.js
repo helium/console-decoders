@@ -59,7 +59,7 @@ return {
 latitude: latitude,
 longitude: longitude,
 roll: roll,
-ritch:pitch,
+pitch:pitch,
 battery:batV,
 ALARM_status:alarm,
 MD:motion_mode,
