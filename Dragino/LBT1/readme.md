@@ -23,26 +23,26 @@ and eCO2.
 ## Where to Buy
 
 
-[Canada--RobotShop](https://www.robotshop.com/en/dragino-technology.html)
+[Canada--RobotShop](https://www.robotshop.com/en/dragino-lorawan-ble-indoor-tracker-lbt1-us---915.html)
 
-[USA！！choovio](https://www.choovio.com/product/laq4-lorawan-air-quality-sensor/)
+[USA！！choovio](https://www.choovio.com/product/lbt1-lorawan-ble-indoor-tracker/)
 
-[USA！！Parley Labs(https://shop.parleylabs.com/collections/dragino/products/laq4-air-quality-sensor)
+[USA！！Parley Labs(https://shop.parleylabs.com/collections/dragino)
 
-[Chile！！altronics](https://altronics.cl/index.php?route=product/search&search=dragino)
+[Chile！！altronics](https://altronics.cl/lbt1-indoor-tracker?search=LBT1)
 
 [Germany！！iot-shop.de](https://iot-shop.de/shop/category/marke-dragino-105)
 
-[Germany！！EXP Tech](https://www.exp-tech.de/plattformen/internet-of-things-iot/10301/lorawan-air-quality-sensor)
+[Germany！！EXP Tech](https://www.exp-tech.de/dragino/) 
 
-[Netherlands！！Antratek Electronics](https://www.antratek.nl/laq4-lorawan-air-quality-sensor)
+[Netherlands！！Antratek Electronics](https://www.antratek.nl/lbt1-lorawan-ble-indoor-tracker)
 
-[UK--Ukiot](https://www.ukiot.store/product/laq4-lorawan-air-quality-sensor/)
+[UK--Ukiot](https://www.ukiot.store/product/lbt1-lorawan-ble-indoor-tracker/)
 
-[Australia！！IOT Store](https://www.iot-store.com.au/collections/dragino/products/laq4-lorawan-air-quality-sensor)
+[Australia！！IOT Store](https://www.iot-store.com.au/products/lorawan-bluetooth-ble-gps-indoor-tracker?_pos=1&_sid=4db9207a0&_ss=r)
 
 [New Zealand！！ADR](https://www.adriley.co.nz/products-and-services/iot-range)
 
-[India！！Enthu Technology](https://www.enthutech.in/zh_HK/shop/product/laq4-lorawan-air-quality-sensor-2634)
+[India！！Enthu Technology](https://www.enthutech.in/zh_HK/shop)
 
 [Japan！！020 iBeacon](http://www.crijapan.jp/index.php/ja/)
