@@ -22,8 +22,27 @@ and eCO2.
 
 ## Where to Buy
 
-[Store.Larkalert.com](https://store.larkalert.com/)
 
-[Antratek](https://www.antratek.com/laq4-lorawan-air-quality-sensor)
+[Canada--RobotShop](https://www.robotshop.com/en/dragino-technology.html)
 
-[Tindie](https://www.tindie.com/products/edwin/laq4-lorawan-air-quality-sensor/)
+[USA！！choovio](https://www.choovio.com/product/laq4-lorawan-air-quality-sensor/)
+
+[USA！！Parley Labs(https://shop.parleylabs.com/collections/dragino/products/laq4-air-quality-sensor)
+
+[Chile！！altronics](https://altronics.cl/index.php?route=product/search&search=dragino)
+
+[Germany！！iot-shop.de](https://iot-shop.de/shop/category/marke-dragino-105)
+
+[Germany！！EXP Tech](https://www.exp-tech.de/plattformen/internet-of-things-iot/10301/lorawan-air-quality-sensor)
+
+[Netherlands！！Antratek Electronics](https://www.antratek.nl/laq4-lorawan-air-quality-sensor)
+
+[UK--Ukiot](https://www.ukiot.store/product/laq4-lorawan-air-quality-sensor/)
+
+[Australia！！IOT Store](https://www.iot-store.com.au/collections/dragino/products/laq4-lorawan-air-quality-sensor)
+
+[New Zealand！！ADR](https://www.adriley.co.nz/products-and-services/iot-range)
+
+[India！！Enthu Technology](https://www.enthutech.in/zh_HK/shop/product/laq4-lorawan-air-quality-sensor-2634)
+
+[Japan！！020 iBeacon](http://www.crijapan.jp/index.php/ja/)
