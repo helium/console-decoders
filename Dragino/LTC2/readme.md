@@ -4,12 +4,16 @@
 The Dragino LTC2 Industrial LoRaWAN Temperature Transmitter is designed to monitor
 temperature for different environment. It supports to read PT100 probe and convert the value to
 temperature and uplink to IoT server via LoRaWAN protocol.
+
 LTC2 supports Datalog feature. User can retrieve the sensor value via LoRaWAN downlink
 command.
+
 LTC2 is powered by 8500mA Li-SOCI2 battery for long time measurement. The battery can run
 2~10 years depends on the network environment and working mode.
+
 Each LTC2 has two internal 24-bit ADC interfaces and are calibrated on 12 set resistors to make
 sure the accuracy measurement on wide range.
+
 LTC2 is LoRaWAN v1.0.3 compatible. Each LTC2 is pre-load with a set of unique keys for LoRaWAN
 registration, register these keys to local LoRaWAN server and it will auto connect after power on.
 
@@ -37,7 +41,7 @@ registration, register these keys to local LoRaWAN server and it will auto conne
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/ltc2-fs-lorawan-food-safety-temperature-transmitter)
 
-[UK--Ukiot]https://www.ukiot.store/product/ltc2-industrial-lorawan-temperature-transmitter/
+[UK--Ukiot](https://www.ukiot.store/product/ltc2-industrial-lorawan-temperature-transmitter/)
 
 [Australia--iot store](https://www.iot-store.com.au/collections/dragino/products/ltc2-lorawan-waterproof-outdoor-temperature-sensor)
 

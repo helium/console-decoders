@@ -4,13 +4,16 @@
 The Dragino LSNPK01 is a LoRaWAN Soil NPK Sensor for IoT of Agriculture. It is designed to
 measure the Soil Fertility Nutrient and provide a plant growing reference. The probe is IP68
 waterproof and can be buried into soil for long term use.
+
 LSNPK01 detects soil’s Nitrogen, Phosphorus, and Potassium use TDR method, and uploads
 these values via wireless to LoRaWAN IoT Server.
+
 The LoRa wireless technology used in LSNPK01 allows device to send data and reach
 extremely long ranges at low data-rates. It provides ultra-long range spread spectrum
 communication and high interference immunity whilst minimizing current consumption.
 LSNPK01 is powered by 8500mAh Li-SOCI2 battery, it is designed for long term use up to 5
 years.
+
 Each LSNPK01 is pre-load with a set of unique keys for LoRaWAN registrations, register these
 keys to local LoRaWAN server and it will auto connect after power on.
 
@@ -38,7 +41,7 @@ keys to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/dragino)
 
-[UK--Ukiot]https://www.ukiot.store/shop/
+[UK--Ukiot](https://www.ukiot.store/shop/)
 
 [Australia--iot store](https://www.iot-store.com.au/collections/dragino)
 

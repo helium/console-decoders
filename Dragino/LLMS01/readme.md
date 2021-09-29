@@ -5,16 +5,19 @@ The Dragino LLMS01 is a LoRaWAN Leaf Moisture Sensor for IoT of Agriculture. It 
 designed to measure the leaf moisture and temperature, so to send to the platform to
 analyze the leaf status such as : watering, moisturizing, dew, frozen. The probe is IP67
 waterproof.
+
 LLMS01 detects leaf’s moisture and temperature use FDR method, it senses the dielectric
 constant cause by liquid over the leaf surface, and cover the value to leaf moisture. The
 probe is design in a leaf shape to best simulate the real leaf characterizes. The probe has as
 density as 15 leaf vein lines per centimeter which make it can senses small drop and more
 accuracy.
+
 The LoRa wireless technology used in LLMS01 allows device to send data and reach
 extremely long ranges at low data-rates. It provides ultra-long range spread spectrum
 communication and high interference immunity whilst minimizing current consumption.
 LLMS01 is powered by 8500mAh Li-SOCI2 battery, it is designed for long term use up to 5
 years.
+
 Each LLMS01 is pre-load with a set of unique keys for LoRaWAN registrations, register these
 keys to local LoRaWAN server and it will auto connect after power on.
 
@@ -42,7 +45,7 @@ keys to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/dragino)
 
-[UK--Ukiot]https://www.ukiot.store/product/llms01-lorawan-leaf-moisture-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/llms01-lorawan-leaf-moisture-sensor/)
 
 [Australia--IoT store](https://www.iot-store.com.au/collections/dragino/products/llms01-lorawan-wireless-leaf-moisture-sensor)
 

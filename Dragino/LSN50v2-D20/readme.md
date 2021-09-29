@@ -4,12 +4,15 @@
 The Dragino LSN50v2-D20 is a LoRaWAN Temperature Sensor for Internet of Things solution. It
 can be used to measure the temperature of air, liquid or object, and then upload to IoT server
 via LoRaWAN wireless protocol.
+
 The temperature sensor used in LSN50v2-D20 is DS18B20, which can measure -55°C ~ 125°C with
 accuracy ±0.5°C (max ±2.0 °C). The sensor cable is made by Silica Gel, and the connection
 between metal probe and cable is double compress for waterproof, moisture-proof and anti-rust
 for long term usage.
+
 LSN50v2-D20 supports temperature alarm feature, user can set temperature alarm for instant
 notice.
+
 LSN50v2-D20 is powered by, it is designed for long term use up to 10 years. (Actually Battery life
 depends on the use environment, update period. Please check related Power Analyze report).
 Each LSN50v2-D20 is pre-load with a set of unique keys for LoRaWAN registration, register these
@@ -39,7 +42,7 @@ keys to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/lsn50v2-d20-lorawan-waterproof-temperature-sensor)
 
-[UK--Ukiot]https://www.ukiot.store/product/lsn50v2-d20-lorawan-waterproof-outdoor-temperature-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/lsn50v2-d20-lorawan-waterproof-outdoor-temperature-sensor/)
 
 [Australia--iot store](https://www.iot-store.com.au/collections/dragino/products/lsn50v2-d20-lorawan-waterproof-temperature-sensor)
 

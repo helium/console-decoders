@@ -5,16 +5,21 @@ The Dragino LHT65 Temperature & Humidity sensor is a Long Range LoRaWAN Sensor. 
 a built-in SHT20 Temperature & Humidity sensor and has an external sensor connector to
 connect to external sensors such as Temperature Sensor, Illumination sensor, Interrupt Sensor,
 ADC sensor etc .
+
 The LHT65 allows users to send data and reach extremely long ranges. It provides ultra-long
 range spread spectrum communication and high interference immunity whilst minimizing current
 consumption. It targets professional wireless sensor network applications such as irrigation
 systems, smart metering, smart cities, building automation, and so on.
+
 LHT65 has a built-in 2400mAh non-chargeable battery which can be used for more than 10
 years*.
+
 LHT65 is full compatible with LoRaWAN v1.0.3 Class A protocol, it can work with standard
 LoRaWAN gateway.
+
 LHT65 has 3200 data records with datetime which can be retrieved with datetime for further
 analyze.
+
 *The actually battery life depends how often to send data, please see battery analyzer chapter. 
 
 ## Help
@@ -41,7 +46,7 @@ analyze.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/lht65-e2-lorawan-temperature-humidity-sensor)
 
-[UK--Ukiot]https://www.ukiot.store/product/lora-temperature-and-humidity-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/lora-temperature-and-humidity-sensor/)
 
 [Australia--Iot store](https://www.iot-store.com.au/collections/dragino/products/lht65-lorawan-temperature-humidity-sensor)
 

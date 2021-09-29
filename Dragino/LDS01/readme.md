@@ -3,12 +3,15 @@
 ## Overview
 The Dragino LDS01 is a LoRaWAN Door Sensor. It detects door open/close status and uplink to
 LoRaWAN network. The LDS01 is small sensor; the dimension is as small as 64 x 30 x 14 mm.
+
 LDS01 is powered by a CR2032 coin battery, in a good LoRaWAN Network Coverage case, it can
 transmit as many as 12,000 uplink packets (base on SF7, 14dB). in poor LoRaWAN network
 coverage, it can transmit ~ 1,300 uplink packets (base on SF10, 18dB). The design goal for one
 battery is up to 1 year. User can easily change the CR2032 battery for reuse.
+
 The LDS01 will send periodically data every day as well as for each door open/close action. It also
 counts the door open times and calculate last door open duration.
+
 Each LDS01 is pre-loaded with a set of unique keys for LoRaWAN registrations, register these keys
 to local LoRaWAN server and it will auto connect after power on. 
 
@@ -36,7 +39,7 @@ to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/lds02-lorawan-door-sensor)
 
-[UK--Ukiot]https://www.ukiot.store/product/lds02-lorawan-door-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/lds02-lorawan-door-sensor/)
 
 [Australia--iot store](https://www.iot-store.com.au/products/lds02-lorawan-wireless-door-window-sensor?_pos=1&_sid=b258e61ac&_ss=r)
 

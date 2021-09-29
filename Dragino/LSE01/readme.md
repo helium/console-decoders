@@ -7,11 +7,13 @@ uses FDR method to calculate the soil moisture with the compensation from soil
 temperature and conductivity. It also has been calibrated in factory for Mineral soil type.
 It detects Soil Moisture, Soil Temperature and Soil Conductivity, and uploads the value via
 wireless to LoRaWAN IoT Server.
+
 The LoRa wireless technology used in LES01 allows device to send data and reach extremely
 long ranges at low data-rates. It provides ultra-long range spread spectrum communication
 and high interference immunity whilst minimizing current consumption.
 LES01 is powered by 4000mA or 8500mAh Li-SOCI2 battery, It is designed for long term use
 up to 10 years.
+
 Each LES01 is pre-load with a set of unique keys for LoRaWAN registrations, register these
 keys to local LoRaWAN server and it will auto connect after power on.
 
@@ -39,7 +41,7 @@ keys to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/lse01-lorawan-soil-sensor-8500mah)
 
-[UK--Ukiot]https://www.ukiot.store/product/lse01-lorawan-soil-moisture-ec-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/lse01-lorawan-soil-moisture-ec-sensor/)
 
 [Australia--IoT Store](https://www.iot-store.com.au/collections/dragino/products/lse01-lorawan-wireless-soil-moisture-ec-sensor)
 

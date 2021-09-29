@@ -4,15 +4,19 @@
 The Dragino LSN50v2-S31 is a LoRaWAN Temperature and Humidity Sensor for Internet of
 Things solution. It is used to measure the surrounding environment temperature and relative air
 humidity precisely, and then upload to IoT server via LoRaWAN wireless protocol.
+
 The temperature & humidity sensor used in LSN50v2-S31 is SHT31, which is fully calibrated,
 linearized, and temperature compensated digital output from Sensirion, it provides a strong
 reliability and long-term stability. The SHT31 is fixed in a waterproof anti-condensation casing for
 long term use.
+
 LSN50v2-S31 supports temperature and humidity alarm feature, user can get alarm for instant
 notice.
+
 LSN50v2-S31 is powered by 8500mAh Li-SOCI2 battery, It is designed for long term use up to 10
 years. (Real-world battery life depends on the use environment, update period. Please check
 related Power Analyze report).
+
 Each LSN50v2-S31 is pre-load with a set of unique keys for LoRaWAN registration, register these
 keys to local LoRaWAN server and it will auto connect after power on. 
 
@@ -40,7 +44,7 @@ keys to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/lsn50v2-s31-lorawan-temperature-humidity-sensor)
 
-[UK--Ukiot]https://www.ukiot.store/product/lsn50v2-s31-lorawan-temperature-humidity-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/lsn50v2-s31-lorawan-temperature-humidity-sensor/)
 
 [Australia--iot store](https://www.iot-store.com.au/collections/dragino/products/lsn50v2-s31-lorawan-temperature-humidity-sensor)
 

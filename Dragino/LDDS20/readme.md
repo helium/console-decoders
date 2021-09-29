@@ -3,18 +3,23 @@
 ## Overview
 The Dragino LDDS20 is a LoRaWAN Ultrasonic liquid level sensor for Internet of Things
 solution. It uses none-contact method to measure the height of liquid in a container without
-opening the container, and send the value via LoRaWAN network to IoT Server
+opening the container, and send the value via LoRaWAN network to IoT Server.
+
 The LDDS20 sensor is installed directly below the container to detect the height of the liquid
 level. User doesn’t need to open a hole on the container to be tested. The none-contact
 measurement makes the measurement safety, easier and possible for some strict situation.
+
 LDDS20 uses ultrasonic sensing technology for distance measurement. LDDS20 is of high
 accuracy to measure various liquid such as: toxic substances, strong acids, strong alkalis and
 various pure liquids in high-temperature and high-pressure airtight containers.
+
 The LoRa wireless technology used in LDDS20 allows device to send data and reach
 extremely long ranges at low data-rates. It provides ultra-long range spread spectrum
 communication and high interference immunity whilst minimizing current consumption.
+
 LDDS20 is powered by 8500mA Li-SOCI2 battery; It is designed for long term use up to 10
 years*.
+
 Each LDDS20 pre-loads with a set of unique keys for LoRaWAN registrations, register these
 keys to local LoRaWAN server and it will auto connect if there is network coverage, after
 power on.

@@ -6,17 +6,20 @@ powered by Li/SOCl2 battery for long term use and secure data transmission. It i
 to facilitate developers to quickly deploy industrial level LoRa and IoT solutions. It helps
 users to turn the idea into a practical application and make the Internet of Things a reality. It
 is easy to program, create and connect your things everywhere.
+
 It is based on SX1276/SX1278 allows the user to send data and reach extremely long ranges
 at low data-rates. It provides ultra-long range spread spectrum communication and high
 interference immunity whilst minimizing current consumption. It targets professional
 wireless sensor network applications such as irrigation systems, smart metering, smart cities,
 smartphone detection, building automation, and so on.
+
 LSN50 uses STM32l0x chip from ST, STML0x is the ultra-low-power STM32L072xx
 microcontrollers incorporate the connectivity power of the universal serial bus (USB 2.0
 crystal-less) with the high-performance ARM® Cortex®-M0+ 32-bit RISC core operating at a
 32 MHz frequency, a memory protection unit (MPU), high-speed embedded memories (192
 Kbytes of Flash program memory, 6 Kbytes of data EEPROM and 20 Kbytes of RAM) plus an
 extensive range of enhanced I/Os and peripherals.
+
 LSN50 is an open source product, it is based on the STM32Cube HAL drivers and lots of
 libraries can be found in ST site for rapid development. 
 
@@ -44,7 +47,7 @@ libraries can be found in ST site for rapid development.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/dragino)
 
-[UK--Ukiot]https://www.ukiot.store/shop/
+[UK--Ukiot](https://www.ukiot.store/shop/)
 
 [Australia--IoT Store](https://www.iot-store.com.au/collections/dragino/products/lsn50-waterproof-long-range-wireless-lorawan-sensor-node-au915)
 

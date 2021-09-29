@@ -1,7 +1,8 @@
 # LSN50v2-D20-D22-D23 LoRaWAN Temperature Sensor
 
 ## Overview
-The Dragino LSN50v2-D2x is a LoRaWAN Temperature Sensor for Internet of Things solution. It can be used to measure the temperature of air, liquid or object, and then upload to IoT server via LoRaWAN wireless protocol. 
+The Dragino LSN50v2-D2x is a LoRaWAN Temperature Sensor for Internet of Things solution. 
+It can be used to measure the temperature of air, liquid or object, and then upload to IoT server via LoRaWAN wireless protocol. 
 
 The temperature sensor used in LSN50v2-D2x is DS18B20, which can measure -55°C ~ 125°C with accuracy ±0.5°C (max ±2.0 °C). 
 
@@ -38,7 +39,7 @@ Each LSN50v2-D2x is pre-load with a set of unique keys for LoRaWAN registration,
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/dragino)
 
-[UK--Ukiot]https://www.ukiot.store/shop/
+[UK--Ukiot](https://www.ukiot.store/shop/)
 
 [Australia--iot store](https://www.iot-store.com.au/collections/dragino/products/lsn50v2-d22-lorawan-temperature-sensor)
 (https://www.iot-store.com.au/collections/dragino/products/lsn50v2-d23-lorawan-temperature-sensor)

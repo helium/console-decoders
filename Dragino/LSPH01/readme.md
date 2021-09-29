@@ -4,14 +4,17 @@
 The Dragino LSPH01 is a LoRaWAN Soil pH Sensor for IoT of Agriculture. It is designed to
 measure the soil PH and soil temperature, so to send to the platform to analyze the soil acid
 or alkali level. The probe is IP68 waterproof.
+
 LSPH01 probe is made by Solid AgCl reference electrode and Pure metal pH sensitive
 electrode. It can detect soil’s pH with high accuracy and stable value. The LSPH01 probe can
 be buried into soil for long time use.
+
 The LoRa wireless technology used in LSPH01 allows device to send data and reach
 extremely long ranges at low data-rates. It provides ultra-long range spread spectrum
 communication and high interference immunity whilst minimizing current consumption.
 LSPH01 is powered by 8500mAh Li-SOCI2 battery, it is designed for long term use up to 5
 years.
+
 Each LSPH01 is pre-load with a set of unique keys for LoRaWAN registrations, register these
 keys to local LoRaWAN server and it will auto connect after power on.
 
@@ -39,7 +42,7 @@ keys to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/dragino)
 
-[UK--Ukiot]https://www.ukiot.store/product/lsph01-lorawan-soil-ph-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/lsph01-lorawan-soil-ph-sensor/)
 
 [Australia--iot store](https://www.iot-store.com.au/collections/dragino/products/lsph01-lorawan-wireless-soil-ph-sensor)
 

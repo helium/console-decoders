@@ -5,16 +5,21 @@ The Dragino LLDS12 is a LoRaWAN LiDAR ToF (Time of Flight) Distance Sensor for I
 of Things solution. It is capable to measure the distance to an object as close as 10
 centimeters (+/- 5cm up to 6m) and as far as 12 meters (+/-1% starting at 6m)!. The LiDAR
 probe uses laser induction technology for distance measurement.
+
 The LLDS12 can be applied to scenarios such as horizontal distance measurement, parking
 management system, object proximity and presence detection, intelligent trash can
 management system, robot obstacle avoidance, automatic control, sewer, etc.
+
 It detects the distance between the measured object and the sensor, and uploads the value
 via wireless to LoRaWAN IoT Server.
+
 The LoRa wireless technology used in LLDS12 allows device to send data and reach
 extremely long ranges at low data-rates. It provides ultra-long range spread spectrum
 communication and high interference immunity whilst minimizing current consumption.
+
 LLDS12 is powered by 8500mAh Li-SOCI2 battery, it is designed for long term use up to 5
 years.
+
 Each LLDS12 is pre-load with a set of unique keys for LoRaWAN registrations, register these
 keys to local LoRaWAN server and it will auto connect after power on.
  
@@ -43,7 +48,7 @@ keys to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/dragino)
 
-[UK--Ukiot]https://www.ukiot.store/product/llds12-lorawan-lidar-tof-distance-sensor/
+[UK--Ukiot](https://www.ukiot.store/product/llds12-lorawan-lidar-tof-distance-sensor/)
 
 [Australia--IoT store](https://www.iot-store.com.au/collections/dragino/products/llds12-lorawan-lidar-tof-distance-sensor)
 

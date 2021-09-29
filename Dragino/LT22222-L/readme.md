@@ -9,11 +9,14 @@ ultra-long range spread spectrum communication and high interference immunity wh
 minimizing current consumption. It targets professional wireless sensor network applications
 such as irrigation systems, smart metering, smart cities, smartphone detection, building
 automation, and so on.
+
 The LT I/O Controllers is aiming to provide a simple plug and play, low cost installation by using
 LoRaWAN wireless technology.
+
 The use environment includes:
 1) If user’s area has LoRaWAN service coverage, they can just install the I/O controller and
 configure it to connect the LoRaWAN provider via wireless.
+
 2) User can set up a LoRaWAN gateway locally and configure the controller to connect to the
 gateway via wireless. 
 
@@ -41,7 +44,7 @@ gateway via wireless.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/lora-i-o-controller-lt-22222)
 
-[UK--Ukiot]https://www.ukiot.store/product/lt-22222-l-lora-i-o-controller/
+[UK--Ukiot](https://www.ukiot.store/product/lt-22222-l-lora-i-o-controller/)
 
 [Australia--iot store](https://www.iot-store.com.au/collections/dragino/products/lorawan-i-o-controller-lt-22222-l)
 

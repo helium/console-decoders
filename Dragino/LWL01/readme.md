@@ -3,12 +3,15 @@
 ## Overview
 The Dragino LWL01 is a LoRaWAN Water Leak Sensor. It detects the water leak status and send it
 to LoRaWAN network. The LWL01 is small sensor, the dimension is as small as 64 x 30 x 14 mm.
+
 LWL01 is powered by a CR2032 coin battery, in a good LoRaWAN Network Coverage case, it can
 transmit as many as 12,000 uplink packets (base on SF7, 14dB). in poor LoRaWAN network
 coverage, it can transmit ~ 1,300 uplink packets (base on SF10, 18dB). The design goal for one
 battery is up to 2 years. User can easily change the CR2032 battery for reuse.
+
 The LWL01 will send periodically data every day as well as for water leak event. It also count the
 water leak event times and also calculate last water leak duration.
+
 Each LWL01 is pre-loaded with a set of unique keys for LoRaWAN registrations, register these keys
 to local LoRaWAN server and it will auto connect after power on.
 
@@ -36,7 +39,7 @@ to local LoRaWAN server and it will auto connect after power on.
 
 [Netherlands--Antratek Electronics](https://www.antratek.nl/lwl02-lorawan-water-leak-sensor)
 
-[UK--Ukiot]https://www.ukiot.store/product/lwl01-lorawan-water-leak/
+[UK--Ukiot](https://www.ukiot.store/product/lwl01-lorawan-water-leak/)
 
 [Australia--iot store](https://www.iot-store.com.au/products/lwl02-lorawan-wireless-water-leak-sensor?_pos=1&_sid=58ac9de7b&_ss=r)
 
