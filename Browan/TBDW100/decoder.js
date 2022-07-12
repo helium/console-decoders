@@ -21,9 +21,8 @@ function Decoder(bytes, port) {
         statusBoolean = false;
     }
 
-    // Battery state
+    // Battery voltage
     batteryVoltage = bytes[1] & 0x0f;
-    batteryCapacity = bytes[1] >> 4;
 
     batteryVoltage = (25 + batteryVoltage) / 10;
     batteryCapacity = (batteryCapacity / 15) * 100;
@@ -45,7 +44,6 @@ function Decoder(bytes, port) {
     output.status_readable = statusReadble;
     output.status_open_boolean = statusBoolean;
     output.battery_voltage = batteryVoltage;
-    output.battery_capacity = batteryCapacity;
     output.temperature = temperature;
     output.time = time;
     output.count = count;
