@@ -4,10 +4,6 @@
 
 function Decoder(bytes, port) {
 
-    var params = {
-        "bytes": bytes
-    };
-
     // Decoder output
     var output = {};
 
