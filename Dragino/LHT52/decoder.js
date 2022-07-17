@@ -69,8 +69,8 @@ function decodeDeviceStatus(bytes) {
     // Sub band
     subBand = bytes[4];
 
-    // Battery Voltage
-    batVoltage = bytes[5]<<8|bytes[6];
+    // Battery Voltage (in V)
+    batVoltage = (bytes[5]<<8|bytes[6]) / 1000;
 
     // Decoder output
     var output = {};
