@@ -1,23 +1,38 @@
+/*jslint bitwise: true */
 function Decoder(bytes, port) {
   // create the object to collect the decoded for returning the decoded payload
   var decoded = {
     bytes: bytes, // original payload
     port: port, // lorawan port
   };
+  var batteryStatus = bytes[1];
 
   // Every device transmits the battery status and the temperature
   // Battery measurement
-  battery = bytes[1] & 0x0f;
-  battery = (25 + battery) / 10;
-  capacity = bytes[1] >> 4;
-  capacity = (capacity / 15) * 100;
+  switch (batteryStatus){
+    case 0:
+      // Device is charging or line powered.
+      decoded.charging = true;
+      decoded.batteryFault = false;
+      break;
+    case 255:
+      // Device could not measure battery — possible Fault
+      decoded.batteryFault = true;
+      break;
+    default:
+      decoded.charging = false;
+      decoded.batteryFault = false;
+      var battery = bytes[1] & 0x0f;
+      battery = (25 + battery) / 10;
+      decoded.battery = battery;
+      var capacity = bytes[1] >> 4;
+      capacity = (capacity / 15) * 100;
+      decoded.capacity = capacity;
+  }
 
   // Temperature measurement
-  temperature = bytes[2] & 0x7f;
+  var temperature = bytes[2] & 0x7f;
   temperature = temperature - 32;
-
-  decoded.battery = battery;
-  decoded.capacity = capacity;
   decoded.temperature = temperature;
 
   // depending on the lorawan port we know which tabs sensor is delivering the decoded
@@ -152,11 +167,10 @@ function Decoder(bytes, port) {
   } else if (port === 136) {
     // Object Locator
     // GNSS Fix?
-    if ((bytes[0] & 0x8) === 0) {
-      positionGnssFix = true;
-    } else {
-      positionGnssFix = false;
-    }
+    decoded.positionGnssFix = (bytes[0] & 0x8) === 0;
+    decoded.moving = (bytes[0] & 0x2) !== 0;
+    decoded.gnssOk = (bytes[0] & 0x16) === 0;
+    decoded.buttonPressed = (bytes[0] & 0x1) === 1;
 
     // Accuracy Measurement
     positionAccuracy = bytes[10] >> 5;
@@ -180,7 +194,6 @@ function Decoder(bytes, port) {
     positionLatitude = positionLatitude / 1000000;
     positionLongitude = positionLongitude / 1000000;
 
-    decoded.positionGnssFix = positionGnssFix;
     decoded.positionLatitude = positionLatitude;
     decoded.positionLongitude = positionLongitude;
     decoded.positionAccuracy = positionAccuracy;
