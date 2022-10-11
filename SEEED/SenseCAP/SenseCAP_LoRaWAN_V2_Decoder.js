@@ -18,7 +18,7 @@ function Decoder (bytes, port) {
     let dataId = item.dataId
     let dataValue = item.dataValue
     let messages = dataIdAndDataValueJudge(dataId, dataValue)
-    decoderArray = messages
+    decoderArray.push(messages)
   }
   result.messages = decoderArray
   return { data: result }
@@ -131,9 +131,9 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
       let rainfall = dataValue.substring(4, 12)
       let airPressure = dataValue.substring(12, 16)
       messages = [{
-        measurementValue: loraWANV2DataFormat(windDirection), measurementId: '4104', type: 'Wind Speed Sensor'
+        measurementValue: loraWANV2DataFormat(windDirection), measurementId: '4104', type: 'Wind Direction Sensor'
       }, {
-        measurementValue: loraWANV2DataFormat(rainfall, 1000), measurementId: '4113', type: 'RainFall Hourly'
+        measurementValue: loraWANV2DataFormat(rainfall, 1000), measurementId: '4113', type: 'Rain Gauge'
       }, {
 
         measurementValue: loraWANV2DataFormat(airPressure, 0.1), measurementId: '4101', type: 'Barometric Pressure'
@@ -142,7 +142,7 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
     case '03':
       let Electricity = dataValue
       messages = [{
-        '3000': loraWANV2DataFormat(Electricity)
+        'Battery(%)': loraWANV2DataFormat(Electricity)
       }]
       break
     case '04':
@@ -152,19 +152,19 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
       let sensorAcquisitionInterval = dataValue.substring(10, 14)
       let gpsAcquisitionInterval = dataValue.substring(14, 18)
       messages = [{
-        '3000': loraWANV2DataFormat(electricityWhether),
-        '3001': `${loraWANV2DataFormat(hwv.substring(0, 2))}.${loraWANV2DataFormat(hwv.substring(2, 4))}`,
-        '3502': `${loraWANV2DataFormat(bdv.substring(0, 2))}.${loraWANV2DataFormat(bdv.substring(2, 4))}`,
-        '3900': parseInt(loraWANV2DataFormat(sensorAcquisitionInterval)) * 60,
-        '3911': parseInt(loraWANV2DataFormat(gpsAcquisitionInterval)) * 60
+        'Battery(%)': loraWANV2DataFormat(electricityWhether),
+        'Hardware Version': `${loraWANV2DataFormat(hwv.substring(0, 2))}.${loraWANV2DataFormat(hwv.substring(2, 4))}`,
+        'Firmware Version': `${loraWANV2DataFormat(bdv.substring(0, 2))}.${loraWANV2DataFormat(bdv.substring(2, 4))}`,
+        'measureInterval': parseInt(loraWANV2DataFormat(sensorAcquisitionInterval)) * 60,
+        'gpsInterval': parseInt(loraWANV2DataFormat(gpsAcquisitionInterval)) * 60
       }]
       break
     case '05':
       let sensorAcquisitionIntervalFive = dataValue.substring(0, 4)
       let gpsAcquisitionIntervalFive = dataValue.substring(4, 8)
       messages = [{
-        '3900': parseInt(loraWANV2DataFormat(sensorAcquisitionIntervalFive)) * 60,
-        '3911': parseInt(loraWANV2DataFormat(gpsAcquisitionIntervalFive)) * 60
+        'measureInterval': parseInt(loraWANV2DataFormat(sensorAcquisitionIntervalFive)) * 60,
+        'gpsInterval': parseInt(loraWANV2DataFormat(gpsAcquisitionIntervalFive)) * 60
       }]
       break
     case '06':
@@ -315,12 +315,12 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
       let channelInfoTwo = loraWANV2ChannelBitFormat(dataValue.substring(0, 2))
       let dataThree = {
         measurementValue: loraWANV2DataFormat(dataValue.substring(2, 10), 1000),
-        measurementId: 4164 + parseInt(channelInfoTwo.one),
+        measurementId: parseInt(channelInfoTwo.one),
         type: 'Measurement'
       }
       let dataFour = {
         measurementValue: loraWANV2DataFormat(dataValue.substring(10, 18), 1000),
-        measurementId: 4164 + parseInt(channelInfoTwo.two),
+        measurementId: parseInt(channelInfoTwo.two),
         type: 'Measurement'
       }
       if (parseInt(channelInfoTwo.one)) {
@@ -356,7 +356,7 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
       let simulationModel = loraWANV2DataFormat(dataValue.substring(4, 6))
       let simulationInterface = loraWANV2DataFormat(dataValue.substring(6, 8))
       messages = [{
-        dataId: 34, '3570': model, '3571': GPIOInput, '3572': simulationModel, '3573': simulationInterface
+         'dataloggerProtocol': model, 'dataloggerGPIOInput': GPIOInput, 'dataloggerAnalogType': simulationModel, 'dataloggerAnalogInterface': simulationInterface
       }]
       break
     case '35':
@@ -394,12 +394,11 @@ function dataIdAndDataValueJudge (dataId, dataValue) {
       let sensorAcquisitionIntervalTD = dataValue.substring(10, 14)
       let gpsAcquisitionIntervalTD = dataValue.substring(14, 18)
       messages = [{
-        dataId: parseInt(dataId),
-        '3000': loraWANV2DataFormat(electricityWhetherTD),
-        '3001': `${loraWANV2DataFormat(hwvTD.substring(0, 2))}.${loraWANV2DataFormat(hwvTD.substring(2, 4))}`,
-        '3502': `${loraWANV2DataFormat(bdvTD.substring(0, 2))}.${loraWANV2DataFormat(bdvTD.substring(2, 4))}`,
-        '3900': parseInt(loraWANV2DataFormat(sensorAcquisitionIntervalTD)) * 60,
-        '3912': parseInt(loraWANV2DataFormat(gpsAcquisitionIntervalTD))
+        'Battery(%)': loraWANV2DataFormat(electricityWhetherTD),
+        'Hardware Version': `${loraWANV2DataFormat(hwvTD.substring(0, 2))}.${loraWANV2DataFormat(hwvTD.substring(2, 4))}`,
+        'Firmware Version': `${loraWANV2DataFormat(bdvTD.substring(0, 2))}.${loraWANV2DataFormat(bdvTD.substring(2, 4))}`,
+        'measureInterval': parseInt(loraWANV2DataFormat(sensorAcquisitionIntervalTD)) * 60,
+        'thresholdMeasureInterval': parseInt(loraWANV2DataFormat(gpsAcquisitionIntervalTD))
       }]
       break
     case '40':
