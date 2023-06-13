@@ -4,7 +4,7 @@ function Decoder(bytes, port) {
   var decoded = {
     valid: true,
     err: 0,
-    payload: bytes,
+    hexPayload: bytes,
     ...messages
   };
   return decoded;
