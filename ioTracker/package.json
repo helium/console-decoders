@@ -1,0 +1,26 @@
+{
+  "name": "iotracker-decoder",
+  "version": "1.0.0",
+  "description": "ioTracker Payload Decoder",
+  "main": "decoder.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "mocha",
+    "build-ttn": "babel decoder.js --out-file decoder_ttn.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@dev.iothings.nl:iothings/javascript-decoder.git"
+  },
+  "author": "Grad van Horck <grad@iotracker.nl>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "mocha": "^8.2.1"
+  }
+}
